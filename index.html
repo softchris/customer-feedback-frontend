@@ -1,0 +1,186 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div class="content mt-40" id="content">
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox" />
+
+        <!--
+        Some spans to act as a hamburger.
+
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+      </div>
+    </nav>
+    <div>
+      <div class="navigation">
+        &lt;Previous
+      </div>
+
+    </div>
+    <div class="page1">
+      <div class="headline mt-40">
+        Book your engineer
+      </div>
+      <div class="normal">
+        If you have insurance with us, you can book our engineer online to come pay you a visit.
+      </div>
+      <div class="normal bigger mt-40 mb-15">
+        What can we help you with?
+      </div>
+      <div class="selection">
+        <label class="container">
+          <span>Heating</span>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="selection">
+        <label class="container">
+          <span>Boiler</span>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="selection">
+        <label class="container">
+          <span>Electricity</span>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="selection">
+        <label class="container">
+          <span>Gas</span>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="action mt-30">
+        Next
+      </div>
+    </div>
+    <div class="page2">
+      <div class="headline mt-40">
+        Register account
+      </div>
+      <div class="input-label mb-10">
+        Email address
+      </div>
+      <div class="mb-40">
+        <input type="text">
+      </div>
+      <div class="input-label mb-10">
+        Confirm email address
+      </div>
+      <div class="mb-40">
+        <input type="text">
+      </div>
+      <div class="input-label mb-10">
+        Contact number
+      </div>
+      <div class="mb-40">
+        <input type="text">
+      </div>
+      <div class="input-label mb-10">
+        Postcode
+      </div>
+      <div class="mb-40">
+        <input type="text">
+      </div>
+      <div class="input-label mb-10">
+        Password
+      </div>
+      <div class="mb-40">
+        <input type="text">
+      </div>
+      <div class="action mt-30">
+        Register
+      </div>
+    </div>
+    <div class="page3">
+      <div class="headline mt-40">
+        Select your date
+      </div>
+      <div class="calendar mb-40">
+        <div class="month-header">MAY</div>
+        <div class="week-day">
+          Mon
+        </div>
+        <div class="week-day">
+          Tue
+        </div>
+        <div class="week-day">
+          Wed
+        </div>
+        <div class="week-day">
+          Thu
+        </div>
+        <div class="week-day">
+          Fri
+        </div>
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day selected">15</div>
+        <div class="day">16</div>
+      </div>
+      <div class="action mt-30">
+        Next
+      </div>
+    </div>
+    <div class="page4">
+      <div class="headline mt-40">
+        Confirm your booking
+      </div>
+      <div class="normal">
+        <p>
+          We have booked your appointment on
+          <strong>14 May 2018.</strong>
+        </p>
+        <p>
+          An engineer will visit your home on this day and will contact you prior to arriving. If you wish to cancel or reschedule
+          your appointment, please call our customer services.
+        </p>
+      </div>
+      <div class="action mt-30">
+        Confirm
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

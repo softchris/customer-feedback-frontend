@@ -1,0 +1,383 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background: #022825;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  font-size: 12px;
+  position: absolute;
+  top: 54px;
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+
+.header {
+  background: #002960;
+  min-height: 60px;
+  color: white;
+  line-height: 80px;
+  font-size: 28px;
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.calendar .month-header {
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  text-align: center;
+  border: solid 1px #979797;
+  height: 50px;
+  line-height: 50px;
+}
+
+.calendar .week-day {
+  grid-row: 2;
+  border: solid 1px #979797;
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.calendar .day {
+  width: 59px;
+  height: 51px;
+  line-height: 51px;
+  text-align: center;
+  border: solid 1px #979797;
+}
+
+.calendar .day.selected {
+  background: #f8e71c;
+  border-color: #f8e71c;
+}
+
+.headline {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.normal {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.normal.bigger {
+  font-size: 16px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.selection {
+  border-top: solid 1px #9b9b9b;
+  height: 60px;
+}
+
+.selection:last-child {
+  border-bottom: solid 1px #9b9b9b;
+}
+
+.selection .label {
+  font-size: 17px;
+}
+
+.selection .container {
+  top: 15px;
+}
+
+.action {
+  border: solid 1px white;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 202px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  z-index: 1;
+  padding: 40px;
+}
+
+.content button {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.content .input-label {
+  font-size: 14px;
+}
+
+.content input {
+  height: 52px;
+  width: 100%;
+  /* margin: 0; */
+  /*box-sizing: border-box; */
+}
+
+@media (min-width: 600px) {
+  .content input {
+    width: inherit;
+  }
+}
+
+@media (min-width: 600px) {
+  .content button {
+    width: inherit;
+  }
+}
+
+.content button.warning {
+  background: #cd202c;
+  color: white;
+}
+
+.content button.primary {
+  background: #009aa6;
+  color: white;
+}
+
+.footer {
+  min-height: 300px;
+  background: #00adef;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* custom radio */
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #d8d8d8;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: tomato;
+}
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
