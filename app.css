@@ -84,7 +84,7 @@ body {
 }
 
 .calendar .day {
-  width: 59px;
+  min-width: 59px;
   height: 51px;
   line-height: 51px;
   text-align: center;
@@ -189,18 +189,6 @@ body {
   width: 100%;
   /* margin: 0; */
   /*box-sizing: border-box; */
-}
-
-@media (min-width: 600px) {
-  .content input {
-    width: inherit;
-  }
-}
-
-@media (min-width: 600px) {
-  .content button {
-    width: inherit;
-  }
 }
 
 .content button.warning {
