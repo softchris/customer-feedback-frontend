@@ -4,7 +4,7 @@ let selectedDay;
 
 $(document).ready(() => {
   let pageNo = 1;
-  let pages = ['page1','page2','page3','page4'];
+  let pages = ['page1','page2','page3','page4', 'page5'];
   let pageElems = pages.map(p => $(`.${p}`));
 
   // hide all pages
