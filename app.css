@@ -1,5 +1,35 @@
+@font-face {
+  font-family: "Gotham-Bold-Multi";
+  src: url("./fonts/Gotham/Gotham-Bold-Multi.otf");
+}
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("./fonts/Gotham/Gotham-Light.otf");
+}
+
+@font-face {
+  font-family: "Gotham-Thin";
+  src: url("./fonts/Gotham/Gotham-Thin.otf");
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("./fonts/GothamBold/GothamBold.otf");
+}
+
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("./fonts/GothamBook/GothamBook.otf");
+}
+
+@font-face {
+  font-family: "Gotham-Light-Italic";
+  src: url("./fonts/GothamLight/GothamLight-Italic.otf");
+}
+
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: Gotham-Book;
   background: #022825;
   color: white;
   margin: 0;
@@ -69,6 +99,7 @@ body {
 .headline {
   font-size: 40px;
   margin-bottom: 20px;
+  font-family: Gotham-Bold;
 }
 
 .normal {
@@ -327,26 +358,14 @@ a:hover {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
 
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
 
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
 
 /*
  * Make this absolute positioned
@@ -373,11 +392,4 @@ a:hover {
 #menu li {
   padding: 10px 0;
   font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
-  transform: none;
 }
